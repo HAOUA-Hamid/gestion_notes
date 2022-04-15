@@ -12,13 +12,13 @@ public class listEtudiants extends ArrayList<Etudiant> {
 	private static final long serialVersionUID = 1L;
 	public boolean add(Etudiant e) {
 		if(this.contains(e)) {
-	    	super.set(modCount, e);
+	    	super.set(indexOf(e), e);
 	    	return false;
 	    }super.add(e);
 		return true;
 	}
 	public List<Etudiant> filtrer(condition c){
-		List<Etudiant> h = null;
+		List<Etudiant> h = new listEtudiants();
 		for(int i=0;i<size();i++) {
 			if(c.estVrai(this.get(i))) {
 				h.add(this.get(i));

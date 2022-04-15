@@ -28,7 +28,7 @@ public class Main {
 		mesEtudiants.add(e6);
 		Collections.sort(mesEtudiants);
 		System.out.println(mesEtudiants);
-		System.out.println(mesEtudiants.filtrer(e->e.getNote()<13));
+		System.out.println(mesEtudiants.filtrer(e->e.getNote()>13));
 		System.out.println("les etudiants qui ont le rattrapage :"+mesEtudiants.filtrer(e->e.getNote()<11));
 	}
 	

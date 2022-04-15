@@ -10,7 +10,6 @@ public class listEtudiants extends ArrayList<Etudiant> {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private List<Etudiant> h;
 	public boolean add(Etudiant e) {
 		if(this.contains(e)) {
 	    	super.set(modCount, e);
@@ -19,7 +18,7 @@ public class listEtudiants extends ArrayList<Etudiant> {
 		return true;
 	}
 	public List<Etudiant> filtrer(condition c){
-		h = null;
+		List<Etudiant> h = null;
 		for(int i=0;i<size();i++) {
 			if(c.estVrai(this.get(i))) {
 				h.add(this.get(i));
